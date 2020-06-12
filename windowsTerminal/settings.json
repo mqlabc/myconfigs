@@ -6,71 +6,80 @@
 
 // For documentation on these settings, see: https://aka.ms/terminal-documentation
 {
-    "$schema": "https://aka.ms/terminal-profiles-schema",
+	"$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "defaultProfile": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+	"defaultProfile": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
 
-    // You can add more global application settings here.
-    // To learn more about global settings, visit https://aka.ms/terminal-global-settings
+	// You can add more global application settings here.
+	// To learn more about global settings, visit https://aka.ms/terminal-global-settings
 
-    // If enabled, selections are automatically copied to your clipboard.
-    "copyOnSelect": false,
+	// If enabled, selections are automatically copied to your clipboard.
+	"copyOnSelect": false,
 
-    // If enabled, formatted data is also copied to your clipboard
-    "copyFormatting": false,
+	// If enabled, formatted data is also copied to your clipboard
+	"copyFormatting": false,
 	//"requestedTheme":"light",
 	"requestedTheme":"dark",
 
-    // A profile specifies a command to execute paired with information about how it should look and feel.
-    // Each one of them will appear in the 'New Tab' dropdown,
-    //   and can be invoked from the commandline with `wt.exe -p xxx`
-    // To learn more about profiles, visit https://aka.ms/terminal-profile-settings
-    "profiles":
-    {
-        "defaults":
-        {
-            // Put settings here that you want to apply to all profiles.
+	// A profile specifies a command to execute paired with information about how it should look and feel.
+	// Each one of them will appear in the 'New Tab' dropdown,
+	//   and can be invoked from the commandline with `wt.exe -p xxx`
+	// To learn more about profiles, visit https://aka.ms/terminal-profile-settings
+	"profiles":
+	{
+		"defaults":
+		{
+			// Put settings here that you want to apply to all profiles.
 			"fontFace": "Hack NF",
-			"colorScheme": "Tango Dark",
+			// "colorScheme": "Tango Dark",
+			"colorScheme": "BlulocoLight",
+			// "colorScheme": "One Half Light",
 			"useAcrylic": true,
-			"acrylicOpacity":0.85,
+			"acrylicOpacity":0.7,
 			"initialCols": 160,
 			"initialRows": 80,
-			"cursorShape": "emptyBox"
+			"cursorShape": "emptyBox",
+			"cursorColor":"#000000"
 		},
-        "list":
-        [
-            {
-                // Make changes here to the powershell.exe profile.
-                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "Windows PowerShell",
-                "commandline": "powershell.exe",
-                "hidden": false
-            },
-            {
-                // Make changes here to the cmd.exe profile.
-                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "name": "命令提示符",
-                "commandline": "cmd.exe",
-                "hidden": false
-            },
-            {
-                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
-                "hidden": false,
-                "name": "Ubuntu-18.04",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            }
-        ]
-    },
+		"list":
+		[
+			{
+				// Make changes here to the powershell.exe profile.
+				"guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+				"name": "Windows PowerShell",
+				"commandline": "powershell.exe",
+				"hidden": false
+			},
+			{
+				// Make changes here to the cmd.exe profile.
+				"guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+				"name": "命令提示符",
+				"commandline": "cmd.exe",
+				"hidden": false
+			},
+			{
+				"guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+				"hidden": false,
+				"name": "Ubuntu-18.04",
+				"source": "Windows.Terminal.Wsl"
+			},
+			{
+				"guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+				"hidden": false,
+				"name": "Azure Cloud Shell",
+				"source": "Windows.Terminal.Azure"
+			},
+			{
+				"guid": "{57b2fa81-2b81-45a8-80a6-71d87511736a}",
+				"name": "SSH",
+				"commandline": "wsl.exe ssh mql@101.37.80.157"
+			}
 
-    // Add custom color schemes to this array.
-    // To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
+		]
+	},
+
+	// Add custom color schemes to this array.
+	// To learn more about color schemes, visit https://aka.ms/terminal-color-schemes
 	"schemes": [
 		{
 			"name": "Tango Dark",
@@ -92,32 +101,58 @@
 			"brightWhite": "#eeeeec",
 			"background": "#141414",
 			"foreground": "#D3D7CF"
+		},
+		{
+			"name": "BlulocoLight",
+			"background": "#faf9e7",
+			"black": "#cbccd5",
+			"blue": "#1e44dd",
+			"brightBlack": "#dedfe8",
+			"brightBlue": "#1085d9",
+			"brightCyan": "#5b80ad",
+			"brightGreen": "#34b354",
+			"brightPurple": "#c00db3",
+			"brightRed": "#fc4a6d",
+			"brightWhite": "#1d1d22",
+			"brightYellow": "#b89427",
+			"cyan": "#1f4d7a",
+			"foreground": "#2a2c33",
+			"green": "#91b69a",
+			"purple": "#6d1bed",
+			"red": "#c90e42",
+			"white": "#000000",
+			"yellow": "#d54d17"
 		}
+
 	],
-    // Add custom keybindings to this array.
-    // To unbind a key combination from your defaults.json, set the command to "unbound".
-    // To learn more about keybindings, visit https://aka.ms/terminal-keybindings
-    "keybindings":
-    [
-        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-        // To learn more about selection, visit https://aka.ms/terminal-selection
-        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
-        { "command": "paste", "keys": "ctrl+v" },
-        { "command": "closeTab", "keys": "ctrl+w" },
-        { "command": "scrollUp", "keys": "ctrl+up" },
-        { "command": "scrollDown", "keys": "ctrl+down" },
+	// Add custom keybindings to this array.
+	// To unbind a key combination from your defaults.json, set the command to "unbound".
+	// To learn more about keybindings, visit https://aka.ms/terminal-keybindings
+	"keybindings":
+	[
+		// Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
+		// These two lines additionally bind them to Ctrl+C and Ctrl+V.
+		// To learn more about selection, visit https://aka.ms/terminal-selection
+		{ "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+		{ "command": "paste", "keys": "ctrl+v" },
+		// { "command": "closeTab", "keys": "ctrl+w" },
+		{ "command": "newTab", "keys": "ctrl+t" },
+		{ "command": "find", "keys": "ctrl+f" },
 
-        { "command": "scrollUpPage", "keys": "ctrl+shift+up" },
-        { "command": "scrollDownPage", "keys": "ctrl+shift+down" },
+		{ "command": "scrollUp", "keys": "ctrl+up" },
+		{ "command": "scrollDown", "keys": "ctrl+down" },
 
-        // Press Ctrl+Shift+F to open the search box
-        { "command": "find", "keys": "ctrl+shift+f" },
+		{ "command": "scrollUpPage", "keys": "ctrl+shift+up" },
+		{ "command": "scrollDownPage", "keys": "ctrl+shift+down" },
 
-        // Press Alt+Shift+D to open a new pane.
-        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-        // To learn more about panes, visit https://aka.ms/terminal-panes
-        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
-    ]
+		// Press Ctrl+Shift+F to open the search box
+		{ "command": "find", "keys": "ctrl+shift+f" },
+
+		// Press Alt+Shift+D to open a new pane.
+		// - "split": "auto" makes this pane open in the direction that provides the most surface area.
+		// - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
+		// To learn more about panes, visit https://aka.ms/terminal-panes
+		{ "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
+	]
 }
+

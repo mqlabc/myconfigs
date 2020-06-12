@@ -101,27 +101,31 @@ hi Type            guifg=#66D9EF               gui=none
 hi Underlined      guifg=#808080               gui=underline
 
 hi VertSplit       guifg=#808080 guibg=#080808 gui=bold
-hi VisualNOS                     guibg=#403D3D
-hi Visual                        guibg=#403D3D
+hi VisualNOS                     guibg=#696969
+"hi Visual                        guibg=#403D3D
+hi Visual                        guibg=#696969
 hi WarningMsg      guifg=#FFFFFF guibg=#333333 gui=bold
 hi WildMenu        guifg=#66D9EF guibg=#000000
 
 if s:molokai_original == 1
    "hi Normal          guifg=#F8F8F2 guibg=#272822
-   hi Normal          guifg=#F8F8F2 guibg=None
+   hi Normal          guifg=#F8F8F2 guibg=NONE
    hi Comment         guifg=#75715E
    hi CursorLine                    guibg=#3E3D32
    hi CursorColumn                  guibg=#3E3D32
    hi LineNr          guifg=#BCBCBC guibg=#3B3A32
    hi NonText         guifg=#BCBCBC guibg=#3B3A32
 else
+   "!!!
    " hi Normal          guifg=#F8F8F2 guibg=#1B1D1E
    hi Normal          guifg=#F8F8F2 guibg=NONE
-   hi Comment         guifg=#465457
-   hi CursorLine                    guibg=#293739
+   hi Comment         guifg=#ffd700
+   hi CursorLine                    guibg=#595959
    hi CursorColumn                  guibg=#293739
-   hi LineNr          guifg=#BCBCBC guibg=#232526
-   hi NonText         guifg=#BCBCBC guibg=#232526
+   " hi LineNr          guifg=#BCBCBC guibg=#232526
+   hi LineNr          guifg=#BCBCBC guibg=NONE
+   "hi NonText         guifg=#BCBCBC guibg=#232526
+   hi NonText         guifg=#BCBCBC guibg=NONE
 end
 
 "
@@ -204,7 +208,8 @@ if &t_Co > 255
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
    hi WildMenu        ctermfg=81  ctermbg=16
 
-   hi Normal          ctermfg=252 ctermbg=233
+   " hi Normal          ctermfg=252 ctermbg=233
+   hi Normal          ctermfg=252 ctermbg=NONE
    hi Comment         ctermfg=59
    hi CursorLine                  ctermbg=234   cterm=none
    hi CursorColumn                ctermbg=234
