@@ -49,8 +49,9 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set encoding=utf-8
-" set relativenumber
+set paste
 set nu
+set relativenumber
 " set showmode
 " set showcmd
 set t_Co=256
@@ -72,7 +73,7 @@ set smartcase
 
 
 if has('mouse')
-    set mouse-=a
+    set mouse+=a
 endif
 
 let g:airline_powerline_fonts = 1
