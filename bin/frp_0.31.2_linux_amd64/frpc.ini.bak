@@ -1,0 +1,10 @@
+[common]
+server_addr = 101.37.80.157
+server_port = 7001
+
+[secret_ssh]
+type = stcp
+sk = ALIYUN!@#
+local_ip = 127.0.0.1
+local_port = 2222
+

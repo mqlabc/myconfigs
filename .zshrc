@@ -117,30 +117,17 @@ alias ll="ls -thal"
 alias sai="sudo apt install"
 alias saud="sudo apt update"
 alias saug="sudo apt upgrade"
-alias py="python3"
-alias -s html=vim
+
+export PATH=~/bin:"$PATH"
 
 # Wsl settings start from here.
 alias edge="'/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'"
 alias xxt="edge http://nuaa.fanya.chaoxing.com/portal"
-alias jlab='edge http://101.37.80.157:8888'
-alias jnb='edge http://101.37.80.157:8888'
+alias oe="explorer.exe"
 
 alias cdd="cd /mnt/e/desktop"
+alias cdg="cd /mnt/e/gitdir"
 alias cda="cd '/mnt/e/OneDrive - nuaa.edu.cn/Algorithm'"
 alias cdod="cd '/mnt/e/OneDrive - nuaa.edu.cn'"
 alias cdod="cd '/mnt/e/OneDrive - nuaa.edu.cn'"
-alias oeod="explorer.exe 'e:\OneDrive - nuaa.edu.cn\Semesters\2019-2020d'"
-alias cdg="cd /mnt/e/gitdir"
 
-alias oe="explorer.exe"
-alias idm="/mnt/d/Internet\ Download\ Manager/IDMan.exe"
-alias xl="/mnt/d/Thunder/Program/Thunder.exe"
-
-alias winipy="/mnt/d/Python365/Scripts/ipython3.exe"
-alias winjupy="cdd;cd WinJupyter;/mnt/d/Python365/Scripts/jupyter-notebook.exe"
-# wrong: alias SSH='ssh -p8022 u0_a112@192.168.'
-# alias -s html='/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'
-
-export PATH=~/bin:"$PATH"
-export SCREENDIR=$HOME/.screen

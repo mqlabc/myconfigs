@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cd /;
+python3 ~/bin/getIP.py | clip.exe
+echo "Socket copied to clipboard, have fun :)"
+python3 -m http.server;
