@@ -110,7 +110,7 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-# My configuration
+# ****************************My configuration****************************
 alias la="ls -a"
 alias ll="ls -thal"
 
@@ -118,9 +118,18 @@ alias sai="sudo apt install"
 alias saud="sudo apt update"
 alias saug="sudo apt upgrade"
 
+# load bin
 export PATH=~/bin:"$PATH"
 
-# Wsl settings start from here.
+# load pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="/home/mql/.pyenv/bin:$PATH"
+export PYTHON_CONFIGURE_OPTS="--enable-shared"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+# ****************************Wsl settings****************************
 alias edge="'/mnt/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'"
 alias xxt="edge http://nuaa.fanya.chaoxing.com/portal"
 alias oe="explorer.exe"
@@ -130,4 +139,8 @@ alias cdg="cd /mnt/e/gitdir"
 alias cda="cd '/mnt/e/OneDrive - nuaa.edu.cn/Algorithm'"
 alias cdod="cd '/mnt/e/OneDrive - nuaa.edu.cn'"
 alias cdod="cd '/mnt/e/OneDrive - nuaa.edu.cn'"
+
+
+# ****************************Deeoin settings****************************
+redshift -O 4500
 
