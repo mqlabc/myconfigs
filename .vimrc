@@ -1,19 +1,3 @@
-" vim-plug配置
-call plug#begin('~/.vim/plugged')
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" Plug 'ycm-core/YouCompleteMe'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/nerdtree'
-
-" snips实现：弃用ultisnips（需要python3支持）
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-call plug#end()
-
 " ****************************************基本配置****************************************
 set encoding=utf-8
 syntax on
@@ -31,8 +15,8 @@ set cursorline
 set hlsearch
 " airline主题
 let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
+let g:airline_theme='light'
+" let g:airline_theme='raven'
 
 " 缩进
 set tabstop=4
@@ -50,7 +34,7 @@ if has('mouse')
 endif
 
 " 切换粘贴
-set pastetoggle=<F2>
+set pastetoggle=<F4>
 
 
 " ****************************************插件配置****************************************
@@ -76,6 +60,3 @@ let g:ycm_key_list_previous_completion = ['<c-p>', '<Up>']
 " set showcmd
 " filetype plugin on
 " filetype indent on
-" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-" let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
