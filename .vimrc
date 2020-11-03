@@ -1,8 +1,30 @@
+" vim-plug配置
+call plug#begin()
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" Plug 'ycm-core/YouCompleteMe'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdtree'
+" Plug 'SirVer/ultisnips'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'ervandew/supertab'
+call plug#end()
+
 " ****************************************基本配置****************************************
 set encoding=utf-8
 syntax on
+
 set nu
-set relativenumber
+augroup relative_number
+ autocmd!
+ autocmd InsertEnter * :set relativenumber
+ autocmd InsertLeave * :set norelativenumber
+augroup END
+
 " 跳转窗口
 " 使用ctrl+w+w
 
